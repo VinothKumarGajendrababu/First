@@ -1,176 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Animated Portfolio</title>
+  <title>XYZ Portfolio</title>
   <style>
     :root {
-      --primary-color: #4e54c8;
-      --secondary-color: #8f94fb;
+      --primary-color: #673ab7;
+      --secondary-color: #00bcd4;
       --text-color: #fff;
-      --bg-color: #f4f4f4;
-    }
+      --bg-color: #f9f9f9;
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+body {
+  background: var(--bg-color);
+  color: #333;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in-out;
+}
 
-    body {
-      background: var(--bg-color);
-      color: #333;
-      line-height: 1.6;
-      animation: fadeInBody 1s ease-in;
-    }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    @keyframes fadeInBody {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-color);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  animation: slideInHeader 1s ease-in-out;
+}
 
-    header {
-      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-      color: var(--text-color);
-      padding: 2rem 1rem;
-      text-align: center;
-      animation: slideInHeader 1s ease-out;
-    }
+@keyframes slideInHeader {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-    @keyframes slideInHeader {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+nav a {
+  color: var(--text-color);
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
-    nav a {
-      color: var(--text-color);
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
+nav a:hover {
+  color: #ffd54f;
+}
 
-    nav a:hover {
-      color: #ffeb3b;
-    }
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  animation: fadeIn 1.2s ease-in;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
+section {
+  margin-bottom: 3rem;
+  animation: fadeInUp 1s ease-in-out;
+}
 
-    section {
-      margin-bottom: 2.5rem;
-      animation: fadeInSection 1s ease-in-out;
-    }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    @keyframes fadeInSection {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--secondary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
 
-    h2 {
-      color: var(--primary-color);
-      margin-bottom: 0.75rem;
-      border-bottom: 2px solid var(--secondary-color);
-      display: inline-block;
-      padding-bottom: 5px;
-    }
+.project {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .project {
-      background: #fff;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: zoomIn 0.5s ease forwards;
-    }
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
 
-    .project:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--primary-color);
+  color: var(--text-color);
+  margin-top: 3rem;
+  animation: fadeIn 2s ease-in-out;
+}
 
-    @keyframes zoomIn {
-      from { transform: scale(0.95); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+button {
+  padding: 0.8rem 1.8rem;
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
 
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background: var(--primary-color);
-      color: var(--text-color);
-      margin-top: 2rem;
-    }
+button:hover {
+  background: #008ba3;
+}
 
-    button {
-      padding: 0.75rem 1.5rem;
-      background: var(--secondary-color);
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s ease;
-    }
+.contact-button-wrapper {
+  text-align: center;
+  margin-top: 1.5rem;
+}
 
-    button:hover {
-      background: #5c6bc0;
-    }
-
-    .contact-button-wrapper {
-      text-align: center;
-      margin-top: 1rem;
-    }
   </style>
 </head>
 <body>
   <header>
-    <h1>John Doe</h1>
-    <p>Creative Web Developer & Designer</p>
+    <h1>XYZ</h1>
+    <p>Full Stack Web Developer | Creative Thinker | Tech Enthusiast</p>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
-
-  <div class="container">
+  </header>  <div class="container">
     <section id="about">
       <h2>About Me</h2>
-      <p>Hello! I'm John, a passionate front-end web developer who loves crafting visually appealing and user-friendly websites. I enjoy blending creativity with code to build engaging digital experiences.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Landing Page Design</h3>
-        <p>A responsive and modern landing page designed using HTML, CSS, and animation effects.</p>
-      </div>
-      <div class="project">
-        <h3>Student Portfolio</h3>
-        <p>A fully responsive personal portfolio template for students with elegant animations.</p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>If you'd like to get in touch, click the button below to open the contact form:</p>
-      <div class="contact-button-wrapper">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfytEIWPfd0cQLpsSluKckvTq8p55E5P2IpIPqlC_HkmyC5Zw/viewform?usp=dialog" target="_blank">
-          <button>Open Contact Form</button>
-        </a>
-      </div>
-    </section>
+      <p>I am XYZ, a passionate full stack developer with hands-on experience in building scalable, secure, and responsive websites. I specialize in both front-end and back-end technologies. My strength lies in turning creative ideas into working, optimized code.</p>
+      <p>I’ve contributed to multiple freelance projects and open-source initiatives, constantly learning new skills in modern frameworks, animations, and deployment techniques. I am currently seeking remote opportunities where I can help businesses grow through tech.</p>
+    </section><section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <h3>Responsive Blog Site</h3>
+    <p>Developed a dynamic blog website using HTML, CSS, JavaScript, and Firebase for live posting and user comments. Includes dark mode and search filtering with animations.</p>
   </div>
+  <div class="project">
+    <h3>Portfolio with GitHub Pages</h3>
+    <p>A responsive animated portfolio designed for freelance developers. Features include scroll reveal animations, mobile-first layout, and form integration.</p>
+  </div>
+  <div class="project">
+    <h3>Online Resume Builder</h3>
+    <p>Created a web tool where users can input information and generate a downloadable resume in real-time. Scored 96% on resume screening tools like Rezi and ResumeWorded.</p>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 John Doe. All rights reserved.</p>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>If you'd like to get in touch, click the button below to fill out the contact form:</p>
+  <div class="contact-button-wrapper">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfytEIWPfd0cQLpsSluKckvTq8p55E5P2IpIPqlC_HkmyC5Zw/viewform?usp=dialog" target="_blank">
+      <button>Open Contact Form</button>
+    </a>
+  </div>
+</section>
+
+  </div>  <footer>
+    <p>&copy; 2025 XYZ. All rights reserved.</p>
   </footer>
 </body>
 </html>
