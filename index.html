@@ -164,7 +164,7 @@ input, textarea {
 
 <section id="contact">
   <h2>Contact</h2>
-  <form id="contactForm">
+  <form action="https://formsubmit.co/vinothkumar.gajendrababu@gmail.com" method="POST">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required />
 
@@ -176,19 +176,10 @@ input, textarea {
 
     <button type="submit">Send</button>
   </form>
-  <p class="message" id="formMessage"></p>
 </section>
 
   </div>  <footer>
     <p>&copy; 2025 John Doe. All rights reserved.</p>
-  </footer>  <script>
-    const form = document.getElementById('contactForm');
-    const message = document.getElementById('formMessage');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      message.textContent = '✅ Thank you! Your message has been received.';
-      form.reset();
-    });
-  </script></body>
+  </footer>
+</body>
 </html>
