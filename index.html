@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Animated Portfolio</title>
+  <title>Vinoth Kumar Gajendrababu | Portfolio</title>
   <style>
     :root {
       --primary-color: #4e54c8;
@@ -44,13 +44,19 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin-top: 1rem;
+      margin-bottom: 1rem;
       border: 3px solid #fff;
+      animation: fadeZoom 1s ease forwards;
     }
 
     @keyframes slideInHeader {
       from { transform: translateY(-100%); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeZoom {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
 
     nav a {
@@ -73,7 +79,7 @@
 
     section {
       margin-bottom: 2.5rem;
-      animation: fadeInSection 1s ease-in-out;
+      animation: fadeInSection 1.2s ease-in-out;
     }
 
     @keyframes fadeInSection {
@@ -140,9 +146,9 @@
 </head>
 <body>
   <header>
+    <img src="IMG_20250113_154815.jpg" alt="Profile Photo of Vinoth Kumar Gajendrababu" />
     <h1>Vinoth Kumar Gajendrababu</h1>
     <p>Creative Web Developer & Designer</p>
-    <img src="IMG_20250113_154815.jpg" alt="Profile Photo of Vinoth Kumar Gajendrababu" />
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -153,18 +159,26 @@
   <div class="container">
     <section id="about">
       <h2>About Me</h2>
-      <p>Hello! I'm Vinoth Kumar Gajendrababu, a passionate front-end web developer who loves crafting visually appealing and user-friendly websites. I enjoy blending creativity with code to build engaging digital experiences.</p>
+      <p>
+        Hello! I'm <strong>Vinoth Kumar Gajendrababu</strong>, a highly motivated front-end web developer with a strong foundation in
+        <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and responsive web design. I specialize in creating fast, clean,
+        and user-friendly websites that follow best practices in accessibility, performance, and SEO.
+      </p>
+      <p>
+        With a keen eye for design and a commitment to detail, I thrive in environments where I can transform creative ideas
+        into functional, interactive web experiences. I’m a quick learner, effective communicator, and love collaborating with others to solve problems.
+      </p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       <div class="project">
         <h3>Landing Page Design</h3>
-        <p>A responsive and modern landing page designed using HTML, CSS, and animation effects.</p>
+        <p>A responsive and modern landing page designed using HTML, CSS, and animation effects. Emphasizes clean UI and fast load speed.</p>
       </div>
       <div class="project">
         <h3>Student Portfolio</h3>
-        <p>A fully responsive personal portfolio template for students with elegant animations.</p>
+        <p>A fully responsive personal portfolio template tailored for students, built using semantic HTML and CSS animations for dynamic visuals.</p>
       </div>
     </section>
 
