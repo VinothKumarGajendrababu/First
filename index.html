@@ -1,9 +1,92 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #444;
+      margin-bottom: 0.5rem;
+    }
+    .project {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
 <body>
+  <header>
+    <h1>John Doe</h1>
+    <p>Web Developer | Designer | Student</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm John, a passionate web developer who loves building clean and user-friendly websites. I'm currently a student learning front-end technologies and taking freelance projects.</p>
+    </section><section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <h3>Project One</h3>
+    <p>A simple landing page built using HTML and CSS.</p>
+  </div>
+  <div class="project">
+    <h3>Project Two</h3>
+    <p>A responsive portfolio site for a student with modern layout.</p>
+  </div>
+</section>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: johndoe@example.com</p>
+  <p>Phone: +91 9876543210</p>
+</section>
 
+  </div>  <footer>
+    <p>&copy; 2025 John Doe. All rights reserved.</p>
+  </footer>
 </body>
 </html>
