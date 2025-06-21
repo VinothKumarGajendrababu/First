@@ -1,148 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vinoth Kumar Gajendrababu | Portfolio</title>
   <style>
     :root {
-      --primary-color: #4e54c8;
-      --secondary-color: #8f94fb;
+      --primary-color: #3e3ef2;
+      --secondary-color: #7b61ff;
+      --accent-color: #ff4081;
       --text-color: #fff;
-      --bg-color: #f4f4f4;
-    }
+      --bg-color: #f0f2f5;
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+body {
+  background: var(--bg-color);
+  color: #333;
+  line-height: 1.6;
+  animation: fadeInBody 1s ease-in;
+}
 
-    body {
-      background: var(--bg-color);
-      color: #333;
-      line-height: 1.6;
-      animation: fadeInBody 1s ease-in;
-    }
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    @keyframes fadeInBody {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+header {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: var(--text-color);
+  padding: 2rem 1rem;
+  text-align: center;
+  animation: slideInHeader 1s ease-out;
+}
 
-    header {
-      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-      color: var(--text-color);
-      padding: 2rem 1rem;
-      text-align: center;
-      animation: slideInHeader 1s ease-out;
-    }
+header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem auto;
+  border: 4px solid #fff;
+  display: block;
+  animation: fadeZoom 1s ease forwards;
+}
 
-    header img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 1.5rem auto;
-      border: 4px solid #fff;
-      display: block;
-      animation: fadeZoom 1s ease forwards;
-    }
+@keyframes slideInHeader {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-    @keyframes slideInHeader {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+@keyframes fadeZoom {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 
-    @keyframes fadeZoom {
-      from { transform: scale(0.5); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+nav a {
+  color: var(--text-color);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
-    nav a {
-      color: var(--text-color);
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
+nav a:hover {
+  color: var(--accent-color);
+}
 
-    nav a:hover {
-      color: #ffeb3b;
-    }
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
+section {
+  margin-bottom: 2.5rem;
+  animation: fadeInSection 1.2s ease-in-out;
+}
 
-    section {
-      margin-bottom: 2.5rem;
-      animation: fadeInSection 1.2s ease-in-out;
-    }
+@keyframes fadeInSection {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    @keyframes fadeInSection {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid var(--secondary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
 
-    h2 {
-      color: var(--primary-color);
-      margin-bottom: 0.75rem;
-      border-bottom: 2px solid var(--secondary-color);
-      display: inline-block;
-      padding-bottom: 5px;
-    }
+.project {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: popIn 0.7s ease forwards;
+}
 
-    .project {
-      background: #fff;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: zoomIn 0.5s ease forwards;
-    }
+.project:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
 
-    .project:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
+@keyframes popIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-    @keyframes zoomIn {
-      from { transform: scale(0.95); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--primary-color);
+  color: var(--text-color);
+  margin-top: 2rem;
+}
 
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background: var(--primary-color);
-      color: var(--text-color);
-      margin-top: 2rem;
-    }
+button {
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
 
-    button {
-      padding: 0.75rem 1.5rem;
-      background: var(--secondary-color);
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s ease;
-    }
+button:hover {
+  background: #e91e63;
+}
 
-    button:hover {
-      background: #5c6bc0;
-    }
+.contact-button-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
 
-    .contact-button-wrapper {
-      text-align: center;
-      margin-top: 1rem;
-    }
   </style>
 </head>
 <body>
@@ -155,56 +154,43 @@
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
-
-  <div class="container">
+  </header>  <div class="container">
     <section id="about">
       <h2>About Me</h2>
-      <p>
-        Hello! I'm <strong>Vinoth Kumar Gajendrababu</strong>, a results-driven web developer with proven skills in 
-        <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>responsive design</strong>. 
-        I build elegant, functional, and accessible websites with modern UI/UX standards.
-      </p>
-      <p>
-        I’m passionate about solving problems using code, improving user experience, and delivering quality results under deadlines.
-        My strengths include clean code practices, version control (Git/GitHub), SEO optimization, and working with frameworks like Bootstrap.
-      </p>
-      <p>
-        Soft skills include excellent communication, teamwork, time management, and critical thinking. 
-        My goal is to continuously learn, grow, and contribute to impactful web projects.
-      </p>
-      <p>
-        ⚡ <strong>Key Skills:</strong> HTML5, CSS3, JavaScript, Git, Responsive Web Design, Web Accessibility, SEO Best Practices.
-      </p>
-      <p>
-        🧩 <strong>Soft Skills:</strong> Communication, Collaboration, Adaptability, Problem-Solving, Leadership.
-      </p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Landing Page Design</h3>
-        <p>A responsive and modern landing page designed using HTML, CSS, and animation effects. Emphasizes clean UI and fast load speed.</p>
-      </div>
-      <div class="project">
-        <h3>Student Portfolio</h3>
-        <p>A fully responsive personal portfolio template tailored for students, built using semantic HTML and CSS animations for dynamic visuals.</p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>If you'd like to get in touch, click the button below to open the contact form:</p>
-      <div class="contact-button-wrapper">
-        <a href="https://docs.google.com/forms/d/1ALm-Dto2aGe-CT15NaOkmWP4J549nalZu9dvwo1h-Ww/edit?usp=forms_home&ouid=108307609702393494848&ths=true&pli=1" target="_blank">
-          <button>Open Contact Form</button>
-        </a>
-      </div>
-    </section>
+      <p>Hello! I'm <strong>Vinoth Kumar Gajendrababu</strong>, a results-driven web developer with proven skills in HTML, CSS, JavaScript, and responsive design. I build elegant, functional, and accessible websites with modern UI/UX standards.</p>
+      <p>Passionate about solving problems using code, I strive to enhance user experience and deliver quality under deadlines. My strengths include clean code practices, Git version control, SEO optimization, and frameworks like Bootstrap.</p>
+      <p>Soft skills include communication, teamwork, and adaptability. I'm always learning and aim to contribute to impactful web projects.</p>
+    </section><section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <h3>Landing Page Design</h3>
+    <p>Responsive landing page using HTML, CSS, and animation. Clean layout with fast loading and elegant transitions.</p>
   </div>
+  <div class="project">
+    <h3>Student Portfolio</h3>
+    <p>Fully responsive template for students using semantic HTML and CSS animations. Designed for academic use.</p>
+  </div>
+  <div class="project">
+    <h3>Quiz App</h3>
+    <p>A simple JavaScript quiz application with interactive UI and score tracking. Mobile-friendly and visually engaging.</p>
+  </div>
+  <div class="project">
+    <h3>To-Do List App</h3>
+    <p>A dynamic task manager using localStorage and JavaScript. Allows add/delete/edit functionality with smooth animations.</p>
+  </div>
+</section>
 
-  <footer>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>If you'd like to get in touch, click the button below to open the contact form:</p>
+  <div class="contact-button-wrapper">
+    <a href="https://docs.google.com/forms/d/1ALm-Dto2aGe-CT15NaOkmWP4J549nalZu9dvwo1h-Ww/viewform" target="_blank">
+      <button>Open Contact Form</button>
+    </a>
+  </div>
+</section>
+
+  </div>  <footer>
     <p>&copy; 2025 Vinoth Kumar Gajendrababu. All rights reserved.</p>
   </footer>
 </body>
